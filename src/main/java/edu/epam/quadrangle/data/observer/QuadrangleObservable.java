@@ -1,8 +1,9 @@
-package edu.epam.quadrangle.entity.quadrangle;
+package edu.epam.quadrangle.data.observer;
 
 import edu.epam.quadrangle.data.observer.Observable;
 import edu.epam.quadrangle.data.observer.Observer;
 import edu.epam.quadrangle.entity.Point;
+import edu.epam.quadrangle.entity.quadrangle.Quadrangle;
 
 import java.util.HashSet;
 import java.util.List;

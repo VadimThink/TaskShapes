@@ -11,13 +11,10 @@ import java.util.List;
 public class PointParser {
     private static final Logger LOGGER = LogManager.getLogger(PointParser.class);
     private static final String SPLITERATOR = "\\s+";
-    private final PointValidator pointValidator;
+    private final PointValidator pointValidator = new PointValidator();
     private static final int X_COORDINATE = 0;
     private static final int Y_COORDINATE = 1;
 
-    public PointParser(PointValidator pointValidator) {
-        this.pointValidator = pointValidator;
-    }
 
     public Point parsePoint(String linePoints) {
         String[] pointsStringArray = linePoints.split(SPLITERATOR);

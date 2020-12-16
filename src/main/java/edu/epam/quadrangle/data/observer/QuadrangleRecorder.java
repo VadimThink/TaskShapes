@@ -1,11 +1,12 @@
-package edu.epam.quadrangle.entity.quadrangle;
+package edu.epam.quadrangle.data.observer;
 
 import edu.epam.quadrangle.data.calculator.angle.impl.AnglesCalculator;
 import edu.epam.quadrangle.data.calculator.point.impl.PointsCalculator;
 import edu.epam.quadrangle.data.calculator.quadrangle.QuadrangleCalculable;
 import edu.epam.quadrangle.data.calculator.quadrangle.impl.QuadrangleCalculator;
 import edu.epam.quadrangle.data.calculator.vector.impl.VectorCalculator;
-import edu.epam.quadrangle.data.observer.Observer;
+import edu.epam.quadrangle.entity.quadrangle.Quadrangle;
+import edu.epam.quadrangle.entity.quadrangle.QuadrangleParameters;
 
 import java.util.HashMap;
 import java.util.Map;

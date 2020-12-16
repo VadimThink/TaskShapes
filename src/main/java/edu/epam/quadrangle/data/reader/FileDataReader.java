@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class FileDataReader {
     private static final String INPUT_ERROR_MESSAGE = "Something wrong with file input.";
@@ -20,12 +21,7 @@ public class FileDataReader {
         List<String> booksLines = new ArrayList<>();
         try {
             fileReader = new BufferedReader(new FileReader(fileName));
-            String line;
-            line = fileReader.readLine();
-            while (line != null) {
-                booksLines.add(line);
-                line = fileReader.readLine();
-            }
+            booksLines = fileReader.lines().collect(Collectors.toList());
         } catch (IOException e) {
             LOGGER.error("Exception: " + e.toString());
             throw new InputDataException(INPUT_ERROR_MESSAGE, e);
